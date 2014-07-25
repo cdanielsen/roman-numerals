@@ -15,3 +15,9 @@ describe('roman_numerals') do
     roman_numerals(4).should(eq("IV"))
   end
 end
+
+describe('single_digits') do
+  it('takes a single digit and converts it into a roman numeral') do
+    single_digits(4).should(eq('IV'))
+  end
+end
