@@ -1,4 +1,5 @@
 def roman_numerals(arabic_num)
+  roman_out = ""
   numeral_table = {
     1 => 'I',
     5 => 'V',
@@ -8,6 +9,8 @@ def roman_numerals(arabic_num)
     500 => 'D',
     1000 => 'M'
   }
-
-  numeral_table[arabic_num]
+  1.upto(arabic_num) do
+    roman_out+=numeral_table[1]
+  end
+roman_out
 end
