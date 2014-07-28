@@ -42,10 +42,26 @@ def roman_to_arabic(roman_num)
 end
 
 def roman_single_digits(single_roman_num)
-  if (single_roman_num.include? "V")
-    single_roman_num.slice!(0)
-    single_roman_num.length + 5
-  else
-    single_roman_num.length
+  output = 0
+
+  if(single_roman_num.include? "IV")
+    output = 4
+  elsif(single_roman_num.include? "IX")
+    output = 9
+  elsif(single_roman_num.length > 0)
+    if (single_roman_num.include? "V")
+      single_roman_num.slice!(0)
+      output = single_roman_num.length + 5
+    else
+      output = single_roman_num.length
+    end
   end
+output
 end
+
+
+
+
+
+
+

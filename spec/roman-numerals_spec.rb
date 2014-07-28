@@ -16,6 +16,14 @@ describe('roman_single_digits') do
   it('converts roman numerals from 5-8 into an arabic number') do
     roman_single_digits('VII').should(eq(7))
   end
+
+  it('converts the roman numeral 4 into an arabic number') do
+    roman_single_digits('IV').should(eq(4))
+  end
+
+  it('converts the roman numeral 9 into an arabic number') do
+    roman_single_digits('IX').should(eq(9))
+  end
 end
 
 describe('arabic_to_roman') do
