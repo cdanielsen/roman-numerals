@@ -1,4 +1,4 @@
-PRIME NUMBER INVESTIGATOR
+ROMAN NUMERAL TRANSLATOR
 ==================================
 
 #Authors:
@@ -6,11 +6,11 @@ PRIME NUMBER INVESTIGATOR
 ####Diane Douglas
 ####Christian Danielsen
 
-##7/23/2014
+##7/28/2014
 
 ###Version:
-V.1.0.0.0
+V.1.0.0.1
 
-###Description: A program with functionality for finding primes up to a given number and finding a given number of primes.
+###Description: A program which translates arabic numerals into their associated roman numerals.
 
 Copyright © 2014
