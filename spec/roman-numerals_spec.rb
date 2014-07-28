@@ -22,6 +22,14 @@ describe('roman_numerals') do
   it('converts 100 into a roman numeral') do
     roman_numerals(100).should(eq("C"))
   end
+
+  it('converts 100 into a roman numeral') do
+    roman_numerals(1000).should(eq("M"))
+  end
+
+  it('converts 100 into a roman numeral') do
+    roman_numerals(2439).should(eq("MMCDXXXIX"))
+  end
 end
 
 describe('first_digit') do
@@ -47,5 +55,15 @@ end
 describe('third_digit') do
   it('takes the third digit and converts it into a roman numeral') do
     third_digit(3).should(eq('CCC'))
+  end
+end
+
+describe('fourth_digit') do
+  it('takes the fourth digit and converts it into a roman numeral') do
+    fourth_digit(1).should(eq('M'))
+  end
+
+  it('takes the fourth digit and converts it into a roman numeral') do
+    fourth_digit(3).should(eq('MMM'))
   end
 end

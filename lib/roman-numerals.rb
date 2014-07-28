@@ -15,11 +15,25 @@ def roman_numerals(arabic_num)
   the_ones = arabic_num[0].to_i
   the_tens = arabic_num[1].to_i
   the_hundreds = arabic_num[2].to_i
-  roman_out = first_digit(the_ones)
-  roman_out += second_digit(the_tens)
+  the_thousands = arabic_num[3].to_i
+  roman_out = fourth_digit(the_thousands)
   roman_out += third_digit(the_hundreds)
+  roman_out += second_digit(the_tens)
+  roman_out += first_digit(the_ones)
   # other functions here for larger digits
   roman_out
+end
+
+def fourth_digit(thousands)
+
+the_thousands_output = ""
+
+  1.upto(thousands) do
+    the_thousands_output+= 'M'
+  end
+
+  the_thousands_output
+
 end
 
 def third_digit(hundreds)
