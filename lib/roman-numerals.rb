@@ -42,5 +42,10 @@ def roman_to_arabic(roman_num)
 end
 
 def roman_single_digits(single_roman_num)
-  single_roman_num.length
+  if (single_roman_num.include? "V")
+    single_roman_num.slice!(0)
+    single_roman_num.length + 5
+  else
+    single_roman_num.length
+  end
 end
