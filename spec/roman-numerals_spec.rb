@@ -23,12 +23,16 @@ describe('roman_numerals') do
     roman_numerals(100).should(eq("C"))
   end
 
-  it('converts 100 into a roman numeral') do
+  it('converts 1000 into a roman numeral') do
     roman_numerals(1000).should(eq("M"))
   end
 
-  it('converts 100 into a roman numeral') do
+  it('converts 2439 into a roman numeral') do
     roman_numerals(2439).should(eq("MMCDXXXIX"))
+  end
+
+  it('converts 2409 into a roman numeral') do
+    roman_numerals(2409).should(eq("MMCDIX"))
   end
 end
 
