@@ -119,7 +119,7 @@ def find_each_digit(digit, placeholder)
     if(isAdditive)
       if digit >= 5
         digit -=5
-        output += $numeral_table[placeholder + 1]
+        output += $numeral_table[placeholder*2 + 1]
       end
         1.upto(digit) do
           output+= $numeral_table[placeholder*2]
@@ -128,8 +128,8 @@ def find_each_digit(digit, placeholder)
     #subtractive
     else
       if digit == 4
-        output += ($numeral_table[placeholder] + $numeral_table[placeholder + 1])
-      else output += ($numeral_table[placeholder] + $numeral_table[placeholder + 2])
+        output += ($numeral_table[placeholder*2] + $numeral_table[placeholder*2 + 1])
+      else output += ($numeral_table[placeholder*2] + $numeral_table[placeholder*2 + 2])
       end
     end
   output

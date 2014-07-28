@@ -80,5 +80,49 @@ describe('find_each_digit') do
   it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
     find_each_digit(1, 2).should(eq('C'))
   end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(1, 3).should(eq('M'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(6, 0).should(eq('VI'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(6, 1).should(eq('LX'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(6, 2).should(eq('DC'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(3, 3).should(eq('MMM'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(4, 0).should(eq('IV'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(9, 0).should(eq('IX'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(4, 1).should(eq('XL'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(9, 1).should(eq('XC'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(4, 2).should(eq('CD'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(9, 2).should(eq('CM'))
+  end
 end
 
