@@ -49,11 +49,10 @@ def roman_single_digits(single_roman_num)
   elsif(single_roman_num.include? "IX")
     output = 9
   elsif(single_roman_num.length > 0)
+    output = single_roman_num.length
     if (single_roman_num.include? "V")
-      single_roman_num.slice!(0)
-      output = single_roman_num.length + 5
-    else
-      output = single_roman_num.length
+      #add 5 for V but length includes V, so subtract 1
+      output += 4
     end
   end
 output
