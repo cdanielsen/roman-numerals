@@ -6,6 +6,10 @@ describe('roman_to_arabic') do
   it('converts roman numerals from 1-9 into an arabic number') do
     roman_to_arabic('III').should(eq(3))
   end
+
+  it('converts blank into 0') do
+    roman_to_arabic('').should(eq(0))
+  end
 end
 
 describe('roman_single_digits') do
