@@ -2,37 +2,49 @@ require ('rspec')
 require ('roman-numerals')
 require ('pry')
 
-describe('roman_numerals') do
+describe('roman_to_arabic') do
+  it('converts roman numerals from 1-9 into an arabic number') do
+    roman_to_arabic('III').should(eq(3))
+  end
+end
+
+describe('roman_single_digits') do
+  it('converts roman numerals from 1-3 into an arabic number') do
+    roman_single_digits('III').should(eq(3))
+  end
+end
+
+describe('arabic_to_roman') do
   it('converts 1 into a roman numeral') do
-    roman_numerals(1).should(eq("I"))
+    arabic_to_roman(1).should(eq("I"))
   end
 
   it('converts 2 into a roman numeral') do
-    roman_numerals(2).should(eq("II"))
+    arabic_to_roman(2).should(eq("II"))
   end
 
   it('converts 4 into a roman numeral') do
-    roman_numerals(4).should(eq("IV"))
+    arabic_to_roman(4).should(eq("IV"))
   end
 
   it('converts 10 into a roman numeral') do
-    roman_numerals(10).should(eq("X"))
+    arabic_to_roman(10).should(eq("X"))
   end
 
   it('converts 100 into a roman numeral') do
-    roman_numerals(100).should(eq("C"))
+    arabic_to_roman(100).should(eq("C"))
   end
 
   it('converts 1000 into a roman numeral') do
-    roman_numerals(1000).should(eq("M"))
+    arabic_to_roman(1000).should(eq("M"))
   end
 
   it('converts 2439 into a roman numeral') do
-    roman_numerals(2439).should(eq("MMCDXXXIX"))
+    arabic_to_roman(2439).should(eq("MMCDXXXIX"))
   end
 
   it('converts 2409 into a roman numeral') do
-    roman_numerals(2409).should(eq("MMCDIX"))
+    arabic_to_roman(2409).should(eq("MMCDIX"))
   end
 end
 

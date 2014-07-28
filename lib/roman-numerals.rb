@@ -1,4 +1,4 @@
-def roman_numerals(arabic_num)
+def arabic_to_roman(arabic_num)
   roman_out = ""
   arabic_num = arabic_num.to_s.split("").reverse
 
@@ -33,4 +33,14 @@ def find_each_digit(digit, placevalue)
     end
   end
   output
+end
+
+def roman_to_arabic(roman_num)
+  arabic_out = ""
+  arabic_out += roman_single_digits(roman_num).to_s
+  arabic_out.to_i
+end
+
+def roman_single_digits(single_roman_num)
+  single_roman_num.length
 end
