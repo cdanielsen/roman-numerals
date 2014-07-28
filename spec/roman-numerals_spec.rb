@@ -67,3 +67,14 @@ describe('fourth_digit') do
     fourth_digit(3).should(eq('MMM'))
   end
 end
+
+describe('find_each_digit') do
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(1, 0).should(eq('I'))
+  end
+
+  it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
+    find_each_digit(1, 1).should(eq('X'))
+  end
+end
+

@@ -1,14 +1,6 @@
 def roman_numerals(arabic_num)
   roman_out = ""
-  # numeral_table = {
-  #   1000 => 'M',
-  #   500 => 'D',
-  #   100 => 'C',
-  #   50 => 'L',
-  #   10 => 'X',
-  #   5 => 'V',
-  #   1 => 'I'
-  # }
+
 
   arabic_num = arabic_num.to_s.split("").reverse
 
@@ -116,4 +108,30 @@ def first_digit(ones)
 
 end
 
-roman_numerals(4)
+def find_each_digit(digit, placeholder)
+  $numeral_table = ['I', 'V', 'X', 'L', 'C', 'D', 'M']
+  output = ""
+  isAdditive = true
+  if digit == 4 || digit == 9
+    isAdditive = false
+  end
+
+    if(isAdditive)
+      if digit >= 5
+        digit -=5
+        output += $numeral_table[placeholder + 1]
+      end
+        1.upto(digit) do
+          output+= $numeral_table[placeholder*2]
+        end
+
+    #subtractive
+    else
+      if digit == 4
+        output += ($numeral_table[placeholder] + $numeral_table[placeholder + 1])
+      else output += ($numeral_table[placeholder] + $numeral_table[placeholder + 2])
+      end
+    end
+  output
+
+end
