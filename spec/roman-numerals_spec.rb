@@ -32,41 +32,41 @@ describe('roman_numerals') do
   end
 end
 
-describe('first_digit') do
-  it('takes a single digit and converts it into a roman numeral') do
-    first_digit(4).should(eq('IV'))
-  end
-end
+# describe('first_digit') do
+#   it('takes a single digit and converts it into a roman numeral') do
+#     first_digit(4).should(eq('IV'))
+#   end
+# end
 
-describe('second_digit') do
-  it('takes the second digit and converts it into a roman numeral') do
-    second_digit(1).should(eq('X'))
-  end
+# describe('second_digit') do
+#   it('takes the second digit and converts it into a roman numeral') do
+#     second_digit(1).should(eq('X'))
+#   end
 
-  it('takes the second digit and converts it into a roman numeral') do
-    second_digit(3).should(eq('XXX'))
-  end
+#   it('takes the second digit and converts it into a roman numeral') do
+#     second_digit(3).should(eq('XXX'))
+#   end
 
-  it('takes the second digit and converts it into a roman numeral') do
-    second_digit(4).should(eq('XL'))
-  end
-end
+#   it('takes the second digit and converts it into a roman numeral') do
+#     second_digit(4).should(eq('XL'))
+#   end
+# end
 
-describe('third_digit') do
-  it('takes the third digit and converts it into a roman numeral') do
-    third_digit(3).should(eq('CCC'))
-  end
-end
+# describe('third_digit') do
+#   it('takes the third digit and converts it into a roman numeral') do
+#     third_digit(3).should(eq('CCC'))
+#   end
+# end
 
-describe('fourth_digit') do
-  it('takes the fourth digit and converts it into a roman numeral') do
-    fourth_digit(1).should(eq('M'))
-  end
+# describe('fourth_digit') do
+#   it('takes the fourth digit and converts it into a roman numeral') do
+#     fourth_digit(1).should(eq('M'))
+#   end
 
-  it('takes the fourth digit and converts it into a roman numeral') do
-    fourth_digit(3).should(eq('MMM'))
-  end
-end
+#   it('takes the fourth digit and converts it into a roman numeral') do
+#     fourth_digit(3).should(eq('MMM'))
+#   end
+# end
 
 describe('find_each_digit') do
   it('takes the current arabic digit and an index value for which digit it is, and converts it to roman numerals') do
