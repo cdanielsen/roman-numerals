@@ -58,6 +58,22 @@ def roman_single_digits(single_roman_num)
 output
 end
 
+def roman_double_digits(double_roman_num)
+  output = 0
+
+  if(double_roman_num.include? "XL")
+    output = 4
+  elsif(double_roman_num.include? "XC")
+    output = 9
+  elsif(double_roman_num.length > 0)
+    output = double_roman_num.length
+    if (double_roman_num.include? "L")
+      output += 4
+    end
+  end
+output
+end
+
 
 
 

@@ -30,6 +30,24 @@ describe('roman_single_digits') do
   end
 end
 
+describe('roman_double_digits') do
+  it('converts roman numerals in the XL range to arabic numbers') do
+    roman_double_digits('X').should(eq(1))
+  end
+
+  it('converts roman numerals in the XL range to arabic numbers') do
+    roman_double_digits('XXX').should(eq(3))
+  end
+
+  it('converts roman numerals in the XL range to arabic numbers') do
+    roman_double_digits('XL').should(eq(4))
+  end
+
+  it('converts roman numerals in the XL range to arabic numbers') do
+    roman_double_digits('XC').should(eq(9))
+  end
+end
+
 describe('arabic_to_roman') do
   it('converts 1 into a roman numeral') do
     arabic_to_roman(1).should(eq("I"))
