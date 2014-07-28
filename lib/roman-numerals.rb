@@ -14,13 +14,41 @@ def roman_numerals(arabic_num)
 
   the_ones = arabic_num[0].to_i
   the_tens = arabic_num[1].to_i
-  roman_out = single_digits(the_ones)
-  roman_out += double_digits(the_tens)
+  the_hundreds = arabic_num[2].to_i
+  roman_out = first_digit(the_ones)
+  roman_out += second_digit(the_tens)
+  roman_out += third_digit(the_hundreds)
   # other functions here for larger digits
   roman_out
 end
 
-def double_digits(tens)
+def third_digit(hundreds)
+  the_hundreds_output = ""
+  isAdditive = true
+  if hundreds == 4 || hundreds == 9
+    isAdditive = false
+  end
+
+    if(isAdditive)
+      if hundreds >= 5
+        hundreds -=5
+        the_hundreds_output += 'D'
+      end
+        1.upto(hundreds) do
+          the_hundreds_output+= 'C'
+        end
+
+    #subtractive
+    else
+      if hundreds == 4
+        the_hundreds_output += 'CD'
+      else the_hundreds_output += 'CM'
+      end
+    end
+  the_hundreds_output
+end
+
+def second_digit(tens)
   the_tens_output = ""
   isAdditive = true
   if tens == 4 || tens == 9
@@ -47,7 +75,7 @@ def double_digits(tens)
   the_tens_output
 end
 
-def single_digits(ones)
+def first_digit(ones)
   the_ones_output = ""
   isAdditive = true
   if ones == 4 || ones == 9
@@ -75,45 +103,3 @@ def single_digits(ones)
 end
 
 roman_numerals(4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  # current_numeral = 'M'
-
-  # numeral_table.each do |key, value|
-  #   if key < arabic_num
-  #     current_numeral = value
-  #     break
-  #   end
-  # end
-
-  # 1.upto(arabic_num) do
-  #   roman_out+=current_numeral
-  # end
-
-  # roman_arr = roman_out.to_a
-  # roman_arr.each_slice(4) do |a,b,c,d|
-  # puts
-  # end
-  # roman_out.to_a.each_index { |i|
-  #   if roman_out
-  # }
-
-# puts roman_out
-

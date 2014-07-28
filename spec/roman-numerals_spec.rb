@@ -18,22 +18,34 @@ describe('roman_numerals') do
   it('converts 10 into a roman numeral') do
     roman_numerals(10).should(eq("X"))
   end
+
+  it('converts 100 into a roman numeral') do
+    roman_numerals(100).should(eq("C"))
+  end
 end
 
-describe('single_digits') do
+describe('first_digit') do
   it('takes a single digit and converts it into a roman numeral') do
-    single_digits(4).should(eq('IV'))
+    first_digit(4).should(eq('IV'))
   end
 end
 
-describe('double_digits') do
-  it('takes a double digit and converts it into a roman numeral') do
-    double_digits(1).should(eq('X'))
+describe('second_digit') do
+  it('takes the second digit and converts it into a roman numeral') do
+    second_digit(1).should(eq('X'))
   end
-  it('takes a double digit and converts it into a roman numeral') do
-    double_digits(3).should(eq('XXX'))
+
+  it('takes the second digit and converts it into a roman numeral') do
+    second_digit(3).should(eq('XXX'))
   end
-  it('takes a double digit and converts it into a roman numeral') do
-    double_digits(4).should(eq('XL'))
+
+  it('takes the second digit and converts it into a roman numeral') do
+    second_digit(4).should(eq('XL'))
+  end
+end
+
+describe('third_digit') do
+  it('takes the third digit and converts it into a roman numeral') do
+    third_digit(3).should(eq('CCC'))
   end
 end
